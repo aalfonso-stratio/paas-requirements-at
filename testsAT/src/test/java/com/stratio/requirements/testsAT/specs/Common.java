@@ -13,11 +13,29 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.stratio.universe.testsAT.specs;
+package com.stratio.requirements.testsAT.specs;
 
-public class ThenSpec extends BaseSpec {
+import com.stratio.qa.specs.CommonG;
+import java.net.Socket;
+import java.nio.channels.ServerSocketChannel;
 
-    public ThenSpec(Common spec) {
-        this.commonspec = spec;
-    }       
+public class Common extends CommonG {
+    private ServerSocketChannel serverSocket;
+    private Socket socket;
+
+    public ServerSocketChannel getServerSocket() {
+        return serverSocket;
+    }
+
+    public void setServerSocket(ServerSocketChannel serverSocket) {
+        this.serverSocket = serverSocket;
+    }
+
+    public Socket getSocket() {
+        return socket;
+    }
+
+    public void setSocket(Socket socket) {
+        this.socket = socket;
+    }
 }

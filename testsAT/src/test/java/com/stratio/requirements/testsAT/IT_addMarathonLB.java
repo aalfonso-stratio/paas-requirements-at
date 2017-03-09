@@ -13,21 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.stratio.universe.testsAT;
+package com.stratio.requirements.testsAT;
 
 import com.stratio.qa.cucumber.testng.CucumberRunner;
 import com.stratio.tests.utils.BaseTest;
 import cucumber.api.CucumberOptions;
 import org.testng.annotations.Test;
 
-@CucumberOptions(features = { "src/test/resources/features/removeUniverse.feature" })
-public class IT_removeUniverse extends BaseTest {
+@CucumberOptions(features = { "src/test/resources/features/addMarathonLB.feature" })
+public class IT_addMarathonLB extends BaseTest {
 
-    public IT_removeUniverse() {
+    public IT_addMarathonLB() {
     }
 
-    @Test(enabled = true, groups = {"removeUniverse"}, dependsOnGroups = {"universe"})
-    public void removal() throws Exception {
+    @Test(enabled = true, groups = {"marathonlb"})
+    public void addition() throws Exception {
         new CucumberRunner(this.getClass()).runCukes();
     }
 }

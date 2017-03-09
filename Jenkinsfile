@@ -3,8 +3,8 @@
 hose {
     EMAIL = 'qa'
     SLACKTEAM = 'stratioqa'
-    MODULE = 'paasuniAT'
-    REPOSITORY = 'paas-universe-at'
+    MODULE = 'paasreqAT'
+    REPOSITORY = 'paas-requirements-at'
     
     ATTIMEOUT = 10
     
@@ -24,9 +24,11 @@ hose {
 
     ATPARAMETERS = """
                     | -DDCOS_CLI_HOST=%%DCOSCLI#0
+                    | -DDCOS_CLI_USER=root
+                    | -DDCOS_CLI_PASSWORD=stratio
                     | """.stripMargin().stripIndent()
 
     AT = { config ->
-        doAT(conf: config, groups: ['universe','removeUniverse'])
+        doAT(conf: config, groups: ['marathonlb'])
     }
 }
