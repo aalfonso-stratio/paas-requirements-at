@@ -26,9 +26,15 @@ hose {
                     | -DDCOS_CLI_HOST=%%DCOSCLI#0
                     | -DDCOS_CLI_USER=root
                     | -DDCOS_CLI_PASSWORD=stratio
+                    | -DMASTER_NAME=10.200.0.205
+                    | -DREMOTE_USER=root
+                    | -DREMOTE_PASSWORD=stratio
+                    | -DPEM_FILE=none
+                    | -DVAULT_HOST=gosec2.node.default-cluster.labs.stratio.com
+                    | -DVAULT_PORT=8200
                     | """.stripMargin().stripIndent()
 
     AT = { config ->
-        doAT(conf: config, groups: ['marathonlb'])
+        doAT(conf: config, groups: ['universe', 'marathonlbdefault', 'marathonlbxd'])
     }
 }

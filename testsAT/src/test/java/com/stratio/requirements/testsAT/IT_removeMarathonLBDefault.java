@@ -20,14 +20,14 @@ import com.stratio.tests.utils.BaseTest;
 import cucumber.api.CucumberOptions;
 import org.testng.annotations.Test;
 
-@CucumberOptions(features = { "src/test/resources/features/addMarathonLB.feature" })
-public class IT_addMarathonLB extends BaseTest {
+@CucumberOptions(features = { "src/test/resources/features/removeMarathonLBDefault.feature" })
+public class IT_removeMarathonLBDefault extends BaseTest {
 
-    public IT_addMarathonLB() {
+    public IT_removeMarathonLBDefault() {
     }
 
-    @Test(enabled = true, groups = {"marathonlb"})
-    public void addition() throws Exception {
+    @Test(enabled = true, groups = {"removeMarathonlbdefault"})
+    public void removalDefault() throws Exception {
         new CucumberRunner(this.getClass()).runCukes();
     }
 }
