@@ -26,7 +26,7 @@ hose {
                     | -DDCOS_CLI_HOST=%%DCOSCLI#0
                     | -DDCOS_CLI_USER=root
                     | -DDCOS_CLI_PASSWORD=stratio
-                    | -DMASTER_NAME=10.200.0.205
+                    | -DDCOS_IP=10.200.0.205
                     | -DREMOTE_USER=root
                     | -DREMOTE_PASSWORD=stratio
                     | -DPEM_FILE=none

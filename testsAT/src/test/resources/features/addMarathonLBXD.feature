@@ -2,9 +2,9 @@
 Feature: Adding marathon-lb XD
 
   Scenario: Add XD-Viewer marathon-lb
-    Given I authenticate to DCOS cluster '${MASTER_NAME}' with email '${DCOS_USER}', user '${REMOTE_USER}' and password '${REMOTE_PASSWORD}' using pem file '${PEM_FILE}'
-    And I securely send requests to '${MASTER_NAME}:443'
-    When I open a ssh connection to '${MASTER_NAME}' with user '${REMOTE_USER}' and password '${REMOTE_PASSWORD}'
+    Given I authenticate to DCOS cluster '${DCOS_IP}' with email '${DCOS_USER}', user '${REMOTE_USER}' and password '${REMOTE_PASSWORD}' using pem file '${PEM_FILE}'
+    And I securely send requests to '${DCOS_IP}:443'
+    When I open a ssh connection to '${DCOS_IP}' with user '${REMOTE_USER}' and password '${REMOTE_PASSWORD}'
     And I run 'cat /tmp/vault_token | sed "s/\"//g"' in the ssh connection and save the value in environment variable 'token'
     When I send a 'POST' request to '/marathon/v2/apps' based on 'schemas/marathon-lb-XD.json' as 'json' with:
       | $.env.VAULT_HOST | UPDATE | ${VAULT_HOST} |
