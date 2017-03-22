@@ -27,6 +27,7 @@ hose {
                     | -DDCOS_CLI_USER=root
                     | -DDCOS_CLI_PASSWORD=stratio
                     | -DDCOS_IP=10.200.0.205
+                    | -DDCOS_USER=admin@demo.stratio.com
                     | -DREMOTE_USER=root
                     | -DREMOTE_PASSWORD=stratio
                     | -DPEM_FILE=none
