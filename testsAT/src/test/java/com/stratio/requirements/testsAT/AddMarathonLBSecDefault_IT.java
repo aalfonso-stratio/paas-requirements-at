@@ -20,13 +20,13 @@ import com.stratio.tests.utils.BaseTest;
 import cucumber.api.CucumberOptions;
 import org.testng.annotations.Test;
 
-@CucumberOptions(features = { "src/test/resources/features/addMarathonLBDefault.feature" })
-public class IT_addMarathonLBDefault extends BaseTest {
+@CucumberOptions(features = { "src/test/resources/features/addMarathonLBSecDefault.feature" })
+public class AddMarathonLBSecDefault_IT extends BaseTest {
 
-    public IT_addMarathonLBDefault() {
+    public AddMarathonLBSecDefault_IT() {
     }
 
-    @Test(enabled = true, groups = {"marathonlbdefault"})
+    @Test(enabled = true, groups = {"marathonlbsecdefault"})
     public void additionDefault() throws Exception {
         new CucumberRunner(this.getClass()).runCukes();
     }

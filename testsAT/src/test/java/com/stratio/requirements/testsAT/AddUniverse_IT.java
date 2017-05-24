@@ -21,9 +21,9 @@ import cucumber.api.CucumberOptions;
 import org.testng.annotations.Test;
 
 @CucumberOptions(features = { "src/test/resources/features/addUniverse.feature" })
-public class IT_addUniverse extends BaseTest {
+public class AddUniverse_IT extends BaseTest {
 
-    public IT_addUniverse() {
+    public AddUniverse_IT() {
     }
 
     @Test(enabled = true, groups = {"universe"})

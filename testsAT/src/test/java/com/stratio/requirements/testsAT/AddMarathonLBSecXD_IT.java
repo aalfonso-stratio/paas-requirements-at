@@ -20,13 +20,13 @@ import com.stratio.tests.utils.BaseTest;
 import cucumber.api.CucumberOptions;
 import org.testng.annotations.Test;
 
-@CucumberOptions(features = { "src/test/resources/features/addMarathonLBXD.feature" })
-public class IT_addMarathonLBXD extends BaseTest {
+@CucumberOptions(features = { "src/test/resources/features/addMarathonLBSecXD.feature" })
+public class AddMarathonLBSecXD_IT extends BaseTest {
 
-    public IT_addMarathonLBXD() {
+    public AddMarathonLBSecXD_IT() {
     }
 
-    @Test(enabled = true, groups = {"marathonlbxd"})
+    @Test(enabled = true, groups = {"marathonlbsecxd"})
     public void additionXD() throws Exception {
         new CucumberRunner(this.getClass()).runCukes();
     }
