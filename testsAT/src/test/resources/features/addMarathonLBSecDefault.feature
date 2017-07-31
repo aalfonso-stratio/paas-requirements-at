@@ -2,8 +2,8 @@
 Feature: Adding marathon-lb Default
 
   Scenario: Add Default marathon-lb
-    Given I open a ssh connection to '${GOSEC2_HOST}' with user 'root' and password 'stratio'
-    And I run 'jq .root_token /opt/stratio/vault/vault_response | sed -e 's/^"//' -e 's/"$//'' in the ssh connection and save the value in environment variable 'vaultToken'
+    Given I open a ssh connection to '${BOOTSTRAP_IP}' with user 'root' and password 'stratio'
+    And I run 'jq .root_token /stratio_volume/vault_response | sed -e 's/^"//' -e 's/"$//'' in the ssh connection and save the value in environment variable 'vaultToken'
     And I authenticate to DCOS cluster '${DCOS_IP}' using email '${DCOS_USER}', with user '${REMOTE_USER}' and password '${REMOTE_PASSWORD}'
     And I open a ssh connection to '${DCOS_CLI_HOST}' with user '${DCOS_CLI_USER}' and password '${DCOS_CLI_PASSWORD}'
     And I securely send requests to '${DCOS_IP}:443'
